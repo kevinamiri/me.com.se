@@ -1,4 +1,4 @@
-kevin's blog running on Gatsby, React, and Node.js
+kevin's blog running on Gatsby, React, Node.js, and Graphql
 
 
 ## Author
