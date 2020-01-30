@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
+import PostTags from "../components/PostTags.js"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 
@@ -31,6 +32,7 @@ class BlogPostTemplate extends React.Component {
             className="markdown"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
+           <PostTags tags={post.tags} />
           <hr className="h-px mb-8" />
           <footer>
             <Bio />
@@ -93,7 +95,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
-        description
+        categories
       }
     }
   }

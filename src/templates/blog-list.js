@@ -24,8 +24,8 @@ class BlogIndex extends React.Component {
           const title = node.frontmatter.title || node.fields.slug
           return (
             <div className="shadow-none flex items-center justify-center flex-col h-auto p-6">
-            <article className="p-6 bg-gray-100 rounded-lg shadow-2x" key={node.fields.slug}>
-              <header>
+            <article className="px-10 pb-6 m-0 bg-graybox rounded-lg shadow-2x" key={node.fields.slug}>
+              <header className="pb-4">
                 <h3 className="text-2xl font-black mt-16 mb-2">
                   <Link
                     className="text-blue-600 shadow-none"
@@ -107,6 +107,8 @@ query blogPageQuery($skip: Int!, $limit: Int!) {
         frontmatter {
           date(formatString: "DD MMMM, YYYY")
           title
+          categories
+          tags
         }
       }
     }

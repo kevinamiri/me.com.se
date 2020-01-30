@@ -2,7 +2,11 @@ const defaultTheme = require("tailwindcss/defaultTheme")
 
 module.exports = {
   theme: {
+    
     extend: {
+      colors: {
+        'graybox': '#f0f0f0',
+      },
       fontFamily: {
         serif: ["Merriweather", ...defaultTheme.fontFamily.serif],
         sans: ["Montserrat", ...defaultTheme.fontFamily.sans],
