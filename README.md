@@ -3,7 +3,7 @@ kevin's blog running on Gatsby, React, Node.js, and Graphql
 
 ## Author
 
-- [Kevin Amiri](https://me.om.se)
+- [Kevin Amiri](https://me.com.se)
 
 
 
