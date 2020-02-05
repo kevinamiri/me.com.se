@@ -7,8 +7,8 @@ slug: Advanced-working-javascript-functions
 categories:
   - javascript
 tags:
-  - Recursion 
   - javascript
+  - loop
 ---
 
 

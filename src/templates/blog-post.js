@@ -3,18 +3,25 @@ import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
-import PostTags from "../components/PostTags.js"
+import PostTags from "../components/PostTags"
 import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
+    const siteTags = this.props.data.site.siteMetadata.tags
     const { previous, next } = this.props.pageContext
+    const elements = post.frontmatter.tags
+    const items = []
+    
+      for (const [index, value] of elements.entries()) {
+      items.push(<span class="rounded bg-red-400 px-1 py-1 text-xs mr-3 text-white" key={index}><Link to={`/tags/${value}`}>{value}</Link></span>)
+      }
+
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={this.props.location} title={siteTitle} tags={siteTags}>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
@@ -26,6 +33,9 @@ class BlogPostTemplate extends React.Component {
             </h1>
             <p className="text-sm leading-loose mb-8 ">
               {post.frontmatter.date}
+            </p>
+            <p className="text-sm leading-loose mb-8 ">
+              {items}
             </p>
           </header>
           <section
@@ -96,7 +106,9 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         categories
+        tags
       }
     }
   }
 `
+

@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       colors: {
         'graybox': '#f0f0f0',
+        'badgetags': '#ffba00',
       },
       fontFamily: {
         serif: ["Merriweather", ...defaultTheme.fontFamily.serif],

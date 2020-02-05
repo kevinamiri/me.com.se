@@ -7,7 +7,7 @@ export default class PostTags extends Component {
     const { tags, size } = this.props
 
     return (
-      <div className="tag-container">
+      <div className="shadow-none flex items-center justify-center flex-col h-auto p-6">
         {tags &&
           tags.map(tag => (
             <Link key={tag} style={{ textDecoration: 'none' }} to={`/tags/${kebabCase(tag)}/`}>
