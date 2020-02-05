@@ -1,6 +1,10 @@
 ---
 title: Contact
 slug: contact
+tags:
+  - about me
+  - test tags
+
 template: page
 ---
 

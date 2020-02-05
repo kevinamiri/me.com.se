@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-
+import kebabCase from 'lodash.kebabcase'
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import PostTags from "../components/PostTags"
@@ -16,7 +16,11 @@ class BlogPostTemplate extends React.Component {
     const items = []
     
       for (const [index, value] of elements.entries()) {
-      items.push(<span class="rounded bg-red-400 px-1 py-1 text-xs mr-3 text-white" key={index}><Link to={`/tags/${value}`}>{value}</Link></span>)
+      items.push(
+        <Link className="shadow-none no-underline inline-block" to={`/tags/${kebabCase(value)}`}> 
+        <span class="rounded bg-red-400 px-1 py-1 text-xs mr-3 text-white no-underline">{value}</span>
+        </Link>
+        )
       }
 
 

@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-
+import kebabCase from 'lodash.kebabcase'
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -22,13 +22,19 @@ class BlogIndex extends React.Component {
         <Bio />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
+          const elements = node.frontmatter.tags
+          const items = []
+          
+            for (const [index, value] of elements.entries()) {
+            items.push(<span class="rounded bg-red-400 px-1 py-1 text-xs mr-3 text-white" key={index}><Link className="shadow-none" to={`/tags/${kebabCase(value)}`}>{value}</Link></span>)
+            }
           return (
             <div className="shadow-none flex items-center justify-center flex-col h-auto p-6">
             <article className="px-10 pb-6 m-0 bg-graybox rounded-lg shadow-2x" key={node.fields.slug}>
               <header className="pb-4">
                 <h3 className="text-2xl font-black mt-16 mb-2">
                   <Link
-                    className="text-blue-600 shadow-none"
+                    className="text-black-600 shadow-none"
                     to={node.fields.slug}
                   >
                     {title}
@@ -43,6 +49,9 @@ class BlogIndex extends React.Component {
                     __html: node.frontmatter.description || node.excerpt,
                   }}
                 />
+             <p className="text-sm leading-loose mb-8">
+              {items}
+            </p>
               </section>
             </article>
             </div>
