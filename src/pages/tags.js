@@ -1,9 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Layout from "../components/layout"
 // Utilities
 import kebabCase from "lodash/kebabCase"
-
 // Components
 import { Helmet } from "react-helmet"
 import { Link, graphql } from "gatsby"
@@ -16,10 +14,10 @@ const TagsPage = ({
     },
   },
 }) => (
-      <div>
+      <div className="text-center">
     <Helmet title={title} />
     <div>
-      <h1>Tags</h1>
+    <h1 className="text-2xl font-sans font-black mt-0 text-center py-10">Tags</h1>
       <ul>
         {group.map(tag => (
           <li key={tag.fieldValue}>
@@ -31,7 +29,6 @@ const TagsPage = ({
       </ul>
     </div>
   </div>
-
 )
 
 TagsPage.propTypes = {

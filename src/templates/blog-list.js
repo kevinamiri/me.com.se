@@ -60,7 +60,7 @@ class BlogIndex extends React.Component {
        <div className="flex-row sm:flex-col md:flex-row-reverse lg:flex-col-reverse xl:flex-row my-12">
         <ul className="flex justify-between">
           {!isFirst && (
-            <Link  className="inline-block border border-blue-500 rounded py-2 px-4 bg-blue-500 hover:bg-blue-700 text-white" to={prevPage} rel="prev">
+            <Link  className="inline-block bg-gray-300 hover:bg-gray-400 py-2 px-4 rounded-l text-black-600 shadow-none" to={prevPage} rel="prev">
               ← Previous Page
             </Link>
           )}
@@ -68,13 +68,13 @@ class BlogIndex extends React.Component {
             <li className="mr-3 m-0"
               key={`pagination-number${i + 1}`}
             >
-              <Link className="inline-block border border-white rounded hover:border-gray-200 text-blue-400 hover:bg-gray-200 py-2 px-4"
+              <Link className="inline-block bg-transparent bg-gray-300 hover:bg-gray-400 text-gray-800 py-2 px-4 rounded-sm shadow-none"
                 to={`/${i === 0 ? '' : i + 1}`}
                 style={{
-                  padding: rhythm(1 / 4),
+                  padding: rhythm(-1 / 4),
                   textDecoration: 'none',
                   color: i + 1 === currentPage ? '#ffffff' : '',
-                  background: i + 1 === currentPage ? '#007acc' : '',
+                  background: i + 1 === currentPage ? '#f96854' : '',
                 }}
               >
                 {i + 1}
@@ -82,7 +82,7 @@ class BlogIndex extends React.Component {
             </li>
           ))}
           {!isLast && (
-            <Link  className="inline-block border border-blue-500 rounded py-2 px-4 bg-blue-500 hover:bg-blue-700 text-white" to={nextPage} rel="next">
+            <Link  className="bg-gray-300 hover:bg-gray-400 py-2 px-4 rounded-r text-black-600 shadow-none" to={nextPage} rel="next">
               Next Page →
             </Link>
           )}

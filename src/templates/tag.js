@@ -12,8 +12,8 @@ const Tags = ({ pageContext, data }) => {
   } tagged with "${tag}"`
 
   return (
-    <div>
-      <h1>{tagHeader}</h1>
+    <div className="text-center">
+      <h1 className="text-2xl font-sans font-black mt-0 text-center py-10">{tagHeader}</h1>
       <ul>
         {edges.map(({ node }) => {
           const { slug } = node.fields
