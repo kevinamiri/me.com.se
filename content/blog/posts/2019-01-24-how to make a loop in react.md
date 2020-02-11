@@ -1,6 +1,7 @@
 ---
 date: 2019-01-24
 title: 'How to write a loop in a React app'
+description: 'some example about how to write a loop function in react'
 template: post
 thumbnail: '../thumbnails/git.png'
 slug: How-to-write-a-loop-in-a-React-app

@@ -15,13 +15,22 @@ class BlogPostTemplate extends React.Component {
     const elements = post.frontmatter.tags
     const items = []
     
-      for (const [index, value] of elements.entries()) {
-      items.push(
-        <Link className="shadow-none no-underline inline-block" to={`/tags/${kebabCase(value)}`}> 
-        <span class="rounded bg-red-400 px-1 py-1 text-xs mr-3 text-white no-underline">{value}</span>
-        </Link>
-        )
-      }
+
+      elements.map((value, index) => {
+        items.push(
+          <Link key={index} className="shadow-none no-underline inline-block" to={`/tags/${kebabCase(value)}`}> 
+          <span className="rounded bg-red-400 px-1 py-1 text-xs mr-3 text-white no-underline">{value}</span>
+          </Link>
+          )
+      })
+
+      // for (const [index, value] of elements.entries()) {
+      // items.push(
+      //   <Link className="shadow-none no-underline inline-block" to={`/tags/${kebabCase(value)}`}> 
+      //   <span class="rounded bg-red-400 px-1 py-1 text-xs mr-3 text-white no-underline">{value}</span>
+      //   </Link>
+      //   )
+      // }
 
 
     return (
@@ -32,7 +41,7 @@ class BlogPostTemplate extends React.Component {
         />
         <article>
           <header>
-            <h1 className="text-5xl font-black mt-8 mb-0">
+            <h1 className="text-3xl font-black mt-8 mb-0">
               {post.frontmatter.title}
             </h1>
             <p className="text-sm leading-loose mb-8 ">
@@ -104,13 +113,14 @@ export const pageQuery = graphql`
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
-      excerpt(pruneLength: 160)
+      excerpt(pruneLength: 150)
       html
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
         categories
         tags
+        description
       }
     }
   }

@@ -1,6 +1,7 @@
 ---
 date: 2018-09-24
 title: 'Advanced working with functions'
+description: 'some example about how to write a recurtion function'
 template: post
 thumbnail: '../thumbnails/git.png'
 slug: Advanced-working-javascript-functions
