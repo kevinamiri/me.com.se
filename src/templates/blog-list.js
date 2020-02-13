@@ -26,7 +26,7 @@ class BlogIndex extends React.Component {
           const items = []
           
             for (const [index, value] of elements.entries()) {
-            items.push(<span class="rounded bg-red-400 px-1 py-1 text-xs mr-3 text-white" key={index}><Link className="shadow-none" to={`/tags/${kebabCase(value)}`}>{value}</Link></span>)
+            items.push(<span class="rounded bg-gray-400 hover:bg-orange-300 px-1 py-1 text-xs mr-3 text-white" key={index}><Link className="shadow-none" to={`/tags/${kebabCase(value)}`}>{value}</Link></span>)
             }
           return (
             <div className="shadow-none flex items-center justify-center flex-col h-auto py-6">
@@ -60,7 +60,7 @@ class BlogIndex extends React.Component {
        <div className="flex-row sm:flex-col md:flex-row-reverse lg:flex-col-reverse xl:flex-row my-12">
         <ul className="flex justify-between">
           {!isFirst && (
-            <Link  className="inline-block bg-gray-300 hover:bg-gray-400 py-2 px-4 rounded-l text-black-600 shadow-none" to={prevPage} rel="prev">
+            <Link  className="inline-block bg-gray-400 hover:bg-orange-300 py-2 px-4 rounded-l text-black-600 shadow-none" to={prevPage} rel="prev">
               ← Previous Page
             </Link>
           )}
@@ -68,7 +68,7 @@ class BlogIndex extends React.Component {
             <li className="mr-3 m-0"
               key={`pagination-number${i + 1}`}
             >
-              <Link className="inline-block bg-transparent bg-gray-300 hover:bg-gray-400 text-gray-800 py-2 px-4 rounded-sm shadow-none"
+              <Link className="inline-block bg-transparent bg-gray-400 hover:bg-orange-300 text-black-600 py-2 px-4 rounded-sm shadow-none"
                 to={`/${i === 0 ? '' : i + 1}`}
                 style={{
                   padding: rhythm(-1 / 4),
@@ -82,7 +82,7 @@ class BlogIndex extends React.Component {
             </li>
           ))}
           {!isLast && (
-            <Link  className="bg-gray-300 hover:bg-gray-400 py-2 px-4 rounded-r text-black-600 shadow-none" to={nextPage} rel="next">
+            <Link  className="bg-gray-400 hover:bg-orange-300 py-2 px-4 rounded-r text-black-600 shadow-none" to={nextPage} rel="next">
               Next Page →
             </Link>
           )}

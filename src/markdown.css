@@ -39,3 +39,6 @@
   @apply list-decimal mb-8;
 }
 
+body {
+  background-color: #f2f3f8;
+}

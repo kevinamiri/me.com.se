@@ -19,7 +19,7 @@ class BlogPostTemplate extends React.Component {
       elements.map((value, index) => {
         items.push(
           <Link key={index} className="shadow-none no-underline inline-block" to={`/tags/${kebabCase(value)}`}> 
-          <span className="rounded bg-red-400 px-1 py-1 text-xs mr-3 text-white no-underline">{value}</span>
+          <span className="rounded bg-gray-400 hover:bg-orange-300 px-1 py-1 text-xs mr-3 text-white no-underline">{value}</span>
           </Link>
           )
       })
