@@ -30,7 +30,7 @@ class BlogIndex extends React.Component {
             }
           return (
             <div className="shadow-none flex items-center justify-center flex-col h-auto py-6">
-            <article className="shadow-xl px-10 pb-6 m-0 bg-graybox rounded-lg" key={node.fields.slug}>
+            <article className="shadow-lg border px-10 pb-6 m-0 bg-graybox rounded-lg" key={node.fields.slug}>
               <header className="pb-4">
                 <h3 className="text-2xl font-black mt-16 mb-2">
                   <Link
