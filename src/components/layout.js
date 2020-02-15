@@ -17,7 +17,7 @@ class Layout extends React.Component {
       )
     } else {
       header = (
-        <h3 className="text-2xl font-sans font-black mt-0">
+        <h3 className="text-xl font-sans font-black mt-0">
           <Link className="shadow-none" to={`/`}>
             {title}
           </Link>
@@ -25,9 +25,9 @@ class Layout extends React.Component {
       )
     }
     return (
-      <div className="max-w-2xl mx-auto px-5 py-10">
+      <div className="max-w-3xl mx-auto px-5 py-10">
         <header>{header}</header>
-        <main  className="font-sans text-base text-gray-600 my-4" >{children}</main>
+        <div  className="font-sans text-base text-gray-600 my-4" >{children}</div>
         <footer className="pt-8">
           © {new Date().getFullYear()}, Built with
           {` `}

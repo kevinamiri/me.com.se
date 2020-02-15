@@ -7,6 +7,7 @@ module.exports = {
       colors: {
         'graybox': '#f0f0f0',
         'badgetags': '#ffba00',
+        'redbutton': '#fd397a',
       },
       fontFamily: {
         serif: ["Merriweather", ...defaultTheme.fontFamily.serif],

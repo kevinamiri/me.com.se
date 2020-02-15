@@ -26,13 +26,13 @@ class BlogIndex extends React.Component {
           const items = []
           
             for (const [index, value] of elements.entries()) {
-            items.push(<span class="rounded bg-gray-400 hover:bg-orange-300 px-1 py-1 text-xs mr-3 text-white" key={index}><Link className="shadow-none" to={`/tags/${kebabCase(value)}`}>{value}</Link></span>)
+            items.push(<span className="rounded bg-gray-400 hover:bg-orange-300 px-1 py-1 text-xs mr-3 text-white" key={index}><Link className="shadow-none" to={`/tags/${kebabCase(value)}`}>{value}</Link></span>)
             }
           return (
-            <div className="shadow-none flex items-center justify-center flex-col h-auto py-6">
-            <article className="shadow-lg border px-10 pb-6 m-0 bg-graybox rounded-lg" key={node.fields.slug}>
+            <div className="w-full shadow-none flex items-center justify-center flex-col h-auto py-6 px-6">
+            <article className="shadow-lg border px-10 py-8 bg-graybox rounded-lg" key={node.fields.slug}>
               <header className="pb-4">
-                <h3 className="text-2xl font-black mt-16 mb-2">
+                <h3 className="sm:text-xl lg:text-2xl xl:text-2xl md:text-2xl font-black mt-8 mb-4">
                   <Link
                     className="text-black-600 shadow-none"
                     to={node.fields.slug}
@@ -52,6 +52,12 @@ class BlogIndex extends React.Component {
              <p className="text-sm leading-loose mb-8">
               {items}
             </p>
+            <Link
+                    className="inline-block bg-red-200 hover:bg-red-300 rounded px-3 py-1 text-sm text-redbutton mr-2"
+                    to={node.fields.slug}
+                  >
+                    read more
+                  </Link>
               </section>
             </article>
             </div>
