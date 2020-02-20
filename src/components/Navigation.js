@@ -6,10 +6,10 @@ function Navigation() {
 const [scrolling, setScrolling] = useState("flex items-center justify-center flex-wrap py-6 px-8");
 
 window.onscroll = function() {
-  checkScrolling();
+  checkscrolling();
 };
 
-function checkScrolling(){
+function checkscrolling(){
 
   if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
     setScrolling("bg-graybox inset-x-0 w-full mx-auto px-6 py-6 flex items-center justify-center flex-wrap border fixed shadow-md");
@@ -19,10 +19,10 @@ function checkScrolling(){
 }
 
   return (
-  <nav className={scrolling} id="navbar">
+  <nav className={scrolling}>
     <div className="max-w-3xl block flex-grow flex">
       <div>
-        <a href="#" className="inline-block bg-gray-300 hover:bg-gray-400 rounded px-3 py-1 text-sm text-gray-700 mr-2">Home</a>
+        <a href="http://me.com.se" className="inline-block bg-gray-300 hover:bg-gray-400 rounded px-3 py-1 text-sm text-gray-700 mr-2">Home</a>
       </div>
     </div>
   </nav>
