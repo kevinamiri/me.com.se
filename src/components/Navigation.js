@@ -1,21 +1,25 @@
 import React, { useState } from "react";
 
 
-
 function Navigation() {
-  window.onscroll = function() {myFunction()};
-  
-  function myFunction() {
-    if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
-      document.getElementById("navbar").className = "bg-graybox inset-x-0 w-full mx-auto px-6 py-6 flex items-center justify-center flex-wrap border fixed shadow-md";
-    } else {
-      document.getElementById("navbar").className = "bg-graybox flex items-center justify-center flex-wrap border py-6 px-6 sticky shadow-md";
-    }
+
+const [scrolling, setScrolling] = useState("flex items-center justify-center flex-wrap py-6 px-8");
+
+window.onscroll = function() {
+  checkScrolling()
+};
+
+function checkScrolling(){
+
+  if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+    setScrolling("bg-graybox inset-x-0 w-full mx-auto px-6 py-6 flex items-center justify-center flex-wrap border fixed shadow-md");
+  } else {
+    setScrolling("bg-graybox flex items-center justify-center flex-wrap border py-6 px-6 sticky shadow-md");
   }
+}
 
   return (
-
-  <nav className="flex items-center justify-center flex-wrap py-6 px-8" id="navbar">
+  <nav className={scrolling} id="navbar">
     <div className="max-w-3xl block flex-grow flex">
       <div>
         <a href="#" className="inline-block bg-gray-300 hover:bg-gray-400 rounded px-3 py-1 text-sm text-gray-700 mr-2">Home</a>
