@@ -7,9 +7,9 @@ function Navigation() {
   
   function myFunction() {
     if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
-      document.getElementById("navbar").className = "bg-graybox inset-x-0 w-full mx-auto px-6 py-6 flex items-center justify-center flex-wrap border fixed shadow-lg ";
+      document.getElementById("navbar").className = "bg-graybox inset-x-0 w-full mx-auto px-6 py-6 flex items-center justify-center flex-wrap border fixed shadow-md";
     } else {
-      document.getElementById("navbar").className = "bg-graybox flex items-center justify-center flex-wrap border py-6 px-6 sticky shadow-lg";
+      document.getElementById("navbar").className = "bg-graybox flex items-center justify-center flex-wrap border py-6 px-6 sticky shadow-md";
     }
   }
 
