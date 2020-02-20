@@ -6,7 +6,7 @@ function Navigation() {
 const [scrolling, setScrolling] = useState("flex items-center justify-center flex-wrap py-6 px-8");
 
 window.onscroll = function() {
-  checkScrolling()
+  checkScrolling();
 };
 
 function checkScrolling(){
