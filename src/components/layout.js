@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import Navigation from "../components/Navigation"
 
 class Layout extends React.Component {
   render() {
@@ -25,6 +26,9 @@ class Layout extends React.Component {
       )
     }
     return (
+      <div className="">
+        <Navigation />
+      
       <div className="max-w-3xl mx-auto px-5 py-10">
         <header>{header}</header>
         <div  className="font-sans text-base text-gray-600 my-4" >{children}</div>
@@ -35,6 +39,7 @@ class Layout extends React.Component {
             Gatsby
           </a>
         </footer>
+      </div>
       </div>
     )
   }
