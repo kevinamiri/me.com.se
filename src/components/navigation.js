@@ -22,7 +22,7 @@ const checkscrolling = () => {
   <nav className={scrolling}>
     <div className="max-w-3xl block flex-grow flex">
       <div>
-        <a href="http://me.com.se" className="inline-block bg-gray-300 hover:bg-gray-400 rounded px-3 py-1 text-sm text-gray-700 mr-2">Home</a>
+        <a href="http://me.com.se" className="inline-block hover:bg-gray-400 hover:text-gray-600  rounded px-3 py-1 text-sm text-gray-500 border-2 mr-2">Home</a>
       </div>
     </div>
   </nav>
