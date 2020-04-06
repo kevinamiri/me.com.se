@@ -43,14 +43,7 @@ const Bio = () => {
         }}
       />
       <p>
-        Written by <strong>{author}</strong> an autistic who doesn't like censorship, a christian who like technology  
-        {` `}
-        <a
-          className="text-blue-600"
-          href={`https://twitter.com/${social.twitter}`}
-        >
-          Twitter
-        </a>
+        Written by <strong>{author}</strong>
       </p>
     </div>
   )
