@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Kevin Amiri`,
     author: `Kevin Amiri`,
-    description: `Let us see if the words are true`,
+    description: `a developer in exile,  I help people to bypass online censorship. I love learning new things and solving problems.`,
     siteUrl: `https://me.com.se`,
     social: {
       twitter: `KevinAmiri91`,
@@ -132,6 +132,5 @@ module.exports = {
       },
     },
     `gatsby-plugin-postcss`,
-    
   ],
 }

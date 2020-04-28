@@ -9,7 +9,6 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 
-
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
@@ -43,7 +42,9 @@ const Bio = () => {
         }}
       />
       <p>
-        Written by <strong>{author}</strong>
+        Written by <strong>{author}</strong> a developer in exile, I help people
+        to bypass online censorship. I love learning new things and solving
+        problems.
       </p>
     </div>
   )
