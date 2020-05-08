@@ -1,38 +1,16 @@
 import React from "react"
-
-
+import Navigation from "../components/navigation"
 
 export default () => {
-
-    return (
-        
-       <div>
-           <h1>Hi there</h1>
-           <div>thus is </div>
-            <div className="bg-blue-200">box blue</div>
-            <div className="bg-gray-400">the gray box</div>
-            <div className="bg-red-200">the gray box</div>
-
-
-
-
-
-
-
-
-
-
-       </div>
-
-
-
-
-
-
-
-
-
-
-
-    )
+  return (
+    <div>
+      <Navigation />
+      <div className="max-w-3xl mx-auto px-5 py-10">
+        <header>zebravpn</header>
+        <div className="font-sans text-base text-gray-600 my-4">
+          https://zebravpn.com
+        </div>
+      </div>
+    </div>
+  )
 }

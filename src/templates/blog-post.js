@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import kebabCase from 'lodash.kebabcase'
+import kebabCase from "lodash.kebabcase"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import PostTags from "../components/PostTags"
@@ -14,24 +14,28 @@ class BlogPostTemplate extends React.Component {
     const { previous, next } = this.props.pageContext
     const elements = post.frontmatter.tags
     const items = []
-    
 
-      elements.map((value, index) => {
-        items.push(
-          <Link key={index} className="shadow-none no-underline inline-block" to={`/tags/${kebabCase(value)}`}> 
-          <span className="rounded bg-gray-400 hover:bg-orange-300 px-1 py-1 text-xs mr-3 text-white no-underline">{value}</span>
-          </Link>
-          )
-      })
+    elements.map((value, index) => {
+      items.push(
+        <Link
+          key={index}
+          className="shadow-none no-underline inline-block"
+          to={`/tags/${kebabCase(value)}`}
+        >
+          <span className="rounded bg-gray-400 hover:bg-orange-300 px-1 py-1 text-xs mr-3 text-white no-underline">
+            {value}
+          </span>
+        </Link>
+      )
+    })
 
-      // for (const [index, value] of elements.entries()) {
-      // items.push(
-      //   <Link className="shadow-none no-underline inline-block" to={`/tags/${kebabCase(value)}`}> 
-      //   <span class="rounded bg-red-400 px-1 py-1 text-xs mr-3 text-white no-underline">{value}</span>
-      //   </Link>
-      //   )
-      // }
-
+    // for (const [index, value] of elements.entries()) {
+    // items.push(
+    //   <Link className="shadow-none no-underline inline-block" to={`/tags/${kebabCase(value)}`}>
+    //   <span class="rounded bg-red-400 px-1 py-1 text-xs mr-3 text-white no-underline">{value}</span>
+    //   </Link>
+    //   )
+    // }
 
     return (
       <Layout location={this.props.location} title={siteTitle} tags={siteTags}>
@@ -47,15 +51,13 @@ class BlogPostTemplate extends React.Component {
             <p className="text-sm leading-loose mb-8 ">
               {post.frontmatter.date}
             </p>
-            <p className="text-sm leading-loose mb-8 ">
-              {items}
-            </p>
+            <p className="text-sm leading-loose mb-8 ">{items}</p>
           </header>
           <section
             className="markdown"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
-           <PostTags tags={post.tags} />
+          <PostTags tags={post.tags} />
           <hr className="h-px mb-8" />
           <footer>
             <Bio />
@@ -125,4 +127,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
