@@ -37,7 +37,7 @@ const BlogIndex = props => {
           )
         }
         return (
-          <div className="w-full shadow-none flex items-center justify-center flex-col h-auto py-6 px-6">
+          <div className="w-full shadow-none flex items-center justify-center flex-col h-auto py-6 px-6 my-6">
             <article
               className="shadow-lg border px-10 py-8 bg-graybox rounded-lg"
               key={node.fields.slug}
@@ -68,6 +68,11 @@ const BlogIndex = props => {
                   read more
                 </Link>
               </section>
+              {/* <img
+                className="w-1/4 rounded-md -mb-16 mt-8 -ml-24 transform skew-y-6"
+                src="https://tailwindcss.com/img/card-top.jpg"
+                alt="Sunset in the mountains"
+              ></img> */}
             </article>
           </div>
         )
