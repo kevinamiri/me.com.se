@@ -9,6 +9,9 @@ categories:
   - censorship
 tags:
   - censorship
+  - philosophy
+  - Politics
+  - People & Society
 ---
 
 ### Do circumvention tools promote democratic values?

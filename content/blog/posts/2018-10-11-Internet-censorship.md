@@ -1,17 +1,20 @@
 ---
 date: 2018-10-11
 title: "oppression of ideas"
-description: "censorship only fuels the fire of social problems"
+description: "Censorship is like saying “Fire” instead of “Fire!” It completely changes the way a situation should be handled. We are currently living in times where censorship can take place in many forms, but we can never believe it will truly solve the problems."
 template: post
 thumbnail: "../thumbnails/git.png"
 slug: Internet-censorship-helps-terrorism
 categories:
   - censorship
+  - People & Society
 tags:
   - censorship
+  - philosophy
+  - People & Society
 ---
 
-### Internet censorship results in far more violence and even terrorism
+### censorship only fuels the fire of social problems
 
 It's a shame that society is allowing ideas to be oppressed. Not only is censorship immoral, it is also extremely ineffective and often counter-productive. There are many reasons why censorship triggers more social problems than solutions.
 

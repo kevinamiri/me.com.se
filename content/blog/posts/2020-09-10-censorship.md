@@ -1,14 +1,16 @@
 ---
 date: 2020-09-10
-title: "censorship"
+title: "Censorship"
 description: "online censorship"
 template: post
 thumbnail: "../thumbnails/git.png"
 slug: censorship
 categories:
   - censorship
+  - Law & Government
 tags:
   - censorship
+  - philosophy
 ---
 
 ### The issue of Internet censorship

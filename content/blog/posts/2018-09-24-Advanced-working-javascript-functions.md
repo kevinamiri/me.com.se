@@ -1,75 +1,72 @@
 ---
 date: 2018-09-24
-title: 'Advanced working with functions'
-description: 'some example about how to write a recurtion function'
+title: "call itself"
+description: "some example about how to write a recurtion function"
 template: post
-thumbnail: '../thumbnails/git.png'
+thumbnail: "../thumbnails/git.png"
 slug: Advanced-working-javascript-functions
 categories:
   - javascript
 tags:
   - javascript
   - loop
+  - dev
 ---
 
-
-
-### Recursion function 
+### call itself
 
 Recursion is a function that can be expressed in terms of itself.
 
-
 ```javascript
-  function multiply(arr, n) {
-    if (n <= 0) {
-      return arr[0];
-    } else {
-      return multiply(arr, n - 1) * arr[n];
-    }
+function multiply(arr, n) {
+  if (n <= 0) {
+    return arr[0]
+  } else {
+    return multiply(arr, n - 1) * arr[n]
   }
-
+}
 ```
 
 ## notice that
+
 ```
 multiply(arr, n) == multiply(arr, n - 1) * arr[n]
 
 ```
 
-
-
 ### loop
 
 ```javascript
 function pow(x, n) {
-  let result = 1;
+  let result = 1
 
   // multiply result by x n times in the loop
   for (let i = 0; i < n; i++) {
-    result *= x;
+    result *= x
   }
 
-  return result;
+  return result
 }
 
-alert( pow(2, 3) ); // 8
+alert(pow(2, 3)) // 8
 ```
 
 ### Recursive function: how function call itself.
+
 ```javascript
 function pow(x, n) {
   if (n == 1) {
-    return x;
+    return x
   } else {
-    return x * pow(x, n - 1);
+    return x * pow(x, n - 1)
   }
 }
 
-alert( pow(2, 3) ); // 8
-
+alert(pow(2, 3)) // 8
 ```
 
 When pow(x, n) is called, the execution splits into two branches:
+
 ```
 
               if n==1  = x

@@ -9,9 +9,12 @@ categories:
   - Privacy
 tags:
   - Privacy
+  - philosophy
 ---
 
 ### Privacy
+
+People who have grown up with the internet - who think of themselves as digital natives - are sometimes surprisingly tolerant of censorship and surveillance. They take it for granted that powerful groups will exercise their power to defend their interests, and that ordinary people will be turned into suspects. The young too often assume that human rights are an old-fashioned ideal, consigned to history by the new realities of physical violence and digital trickery.
 
 Privacy, to me is the right for every human being to have a private life. Not in the sense of having no friends or family and living alone but rather that every person should be able to go about their daily business without other people watching them all the time. Privacy gives everybody an opportunity to work on themselves as they see fit and try out their ideas without fear of public ridicule or judgement from others.
 
