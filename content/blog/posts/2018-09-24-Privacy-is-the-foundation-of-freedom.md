@@ -1,7 +1,7 @@
 ---
 date: 2018-09-24
 title: "Privacy"
-description: "Privacy is the foundation of freedom."
+description: "The Internet is the most effective tool for enabling global communication and empowerment ever developed. However, online privacy is disappearing rapidly."
 template: post
 thumbnail: "../thumbnails/git.png"
 slug: Privacy-is-the-foundation-of-freedom
