@@ -35,9 +35,7 @@ const Bio = () => {
         }}
       />
       <p>
-        Written by <strong>{author}</strong> <br></br>a developer in exile, I
-        help people to bypass online censorship. I love learning new things and
-        solving problems.
+        Written by <strong>{author}</strong> <br></br>A developer in exile
       </p>
     </div>
   )
